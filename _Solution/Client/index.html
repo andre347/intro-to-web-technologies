@@ -7,7 +7,17 @@
     <title>Your first web app!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Carbon Intensity in the UK</h1>
+    <a href="https://en.wikipedia.org/wiki/Emission_intensity" target="_blank">What is Carbon Intensity?</a>
+    <form>
+      <label for="inputBox">Add Postcode</label>
+      <input type="text" id="inputBox" placeholder="Postcode.." required />
+      <button type="button" id="btn">Get data!</button>
+    </form>
+    <button type="button" id="btnDB">Add to DB!</button>
+
+    <!-- this is where our API results will show up -->
+    <div id="infoContainer"></div>
 
     <script src="./script.js"></script>
   </body>

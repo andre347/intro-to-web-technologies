@@ -10,14 +10,15 @@ The code in this repository is a reference point for those that want to follow a
 - [ ] Web Browser: Google Chrome or Mozilla Firefox
 - [ ] Basic understanding of APIs: Get, Post, Put etc.
 - [ ] Basic understanding of Git & Github
+- [ ] NodeJS (& NPM, which will be installed automatically if you install NodeJS)
 
 **Extensions installed for VS Code**:
 
-- [ ] Emmet (default)
-- [ ] Prettier (default?)
-- [ ] Live Server
-- [ ] Prettify JSON
-- [ ] Bracket Pair Colorizer
+- [ ] Emmet (default) => for the autocomplete
+- [ ] Prettier (default?) => to reformat your code
+- [ ] Live Server => start a server for any html file
+- [ ] Prettify JSON => make JSON look pretty
+- [ ] Bracket Pair Colorizer => to avoid being confused with all the brackets
 
 **Theme**:
 
