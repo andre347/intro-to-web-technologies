@@ -38,4 +38,4 @@ Two folders in solutions:
    - script.js
 2. **Server**
    - server.js
-   - db.json
+   - db.db
