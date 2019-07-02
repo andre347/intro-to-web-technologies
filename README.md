@@ -39,3 +39,10 @@ Two folders in solutions:
 2. **Server**
    - server.js
    - db.db
+
+## API that we are going to use
+
+```
+https://api.coindesk.com/v1/bpi/currentprice.json
+
+```
