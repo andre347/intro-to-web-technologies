@@ -46,3 +46,53 @@ Two folders in solutions:
 https://api.coindesk.com/v1/bpi/currentprice.json
 
 ```
+
+---
+
+## Questions (to be answered)
+
+Write in your own words please! 🤓
+
+### **HTML** 💻
+
+- What is HTML?
+
+- How do we create a HTML file?
+
+- What are the main building blocks of an HTML file?
+
+- What is the DOM (Document Object Model)?
+
+- What are IDs and Classes (not a class in JavaScript) in HTML?
+
+### **JavaScript** 🚀
+
+- How do we include JS files in HTML? Is there more than 1 option?
+
+- What is the browser console and how do we use it?
+
+- What is jQuery?
+
+- What is ES6 (ECMAScript)?
+
+- What is Front End JavaScript and what is Back End JavaScript? (What are use cases for the latter?)
+
+- What variables do we have in JS (different ways of declaring a variable)?
+
+- Which and how does JS handle datatypes?
+
+- What are functions? (are there different ways in writing them?)
+
+- What is an array? (give me a few examples)
+
+- What is an object (give me a few example) and how does it relate to arrays?
+
+- How do we write IF statement in JS?
+
+- What is a loop and how do we write it?
+
+- What other types of loops do you have in JS?
+
+- What is an Event Listener? (give me a few examples)
+
+- What is a 'Promise'?
