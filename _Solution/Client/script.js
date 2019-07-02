@@ -3,12 +3,13 @@ console.log("Hello data school!");
 // Create a variable to hold API
 // We can create variables in three different ways
 // Old skool would be 'var', however, since about 2015 (ES6) we use const and let
-const API_URL = `https://api.carbonintensity.org.uk/regional/postcode/`;
+const API_URL = `https://api.coindesk.com/v1/bpi/currentprice.json`;
 document.getElementById("btnDB").disabled = true;
+// create a variable where we store data for adding to DB
 let userData;
 
-// get the postcode types in by the user
-const selectedPostcode = document.getElementById("inputBox");
+// get the amount that the user types in
+const addedAmount = document.getElementById("inputBox");
 // Create function to grab the data from the API
 // various ways of creating a function
 // we can call the Fetch API immediatly (this will load when the page loads) and use the promises
@@ -22,9 +23,9 @@ fetch(API_URL)
 // or we can use Async/Await
 
 const fetchData = async () => {
-  const response = await fetch(API_URL + selectedPostcode.value.toUpperCase());
+  const response = await fetch(API_URL);
   const json = await response.json();
-  return json.data[0];
+  return json.bpi;
 };
 
 // const sendData = async userInput => {
@@ -46,17 +47,18 @@ const fetchData = async () => {
 
 // get the button from the HTML and attach event listener
 // get the postcode information container
-const postcodeContainer = document.getElementById("infoContainer");
+const infoContainer = document.getElementById("infoContainer");
 
 document.getElementById("btn").addEventListener("click", async e => {
   e.preventDefault();
-  if (selectedPostcode.value) {
-    const postCodeData = await fetchData();
-    postcodeContainer.innerHTML = `Postcode: ${postCodeData.postcode} ${postCodeData.shortname}`;
+  if (addedAmount.value) {
+    const currencyData = await fetchData();
+    const convertedData = +addedAmount.value * currencyData.GBP.rate_float;
+    infoContainer.innerHTML = `Amount: ${currencyData.GBP.rate_float}, which is Converted Amount: ${convertedData}`;
     document.getElementById("btnDB").disabled = false;
-    userData = postCodeData.postcode;
+    userData = currencyData;
   } else {
-    postcodeContainer.innerHTML = `Please specify a postcode`;
+    infoContainer.innerHTML = `Please specify an amount to convert`;
   }
 });
 
@@ -75,13 +77,12 @@ document.getElementById("btnDB").addEventListener("click", async e => {
 
     const db_response = await fetch("http://localhost:1234/api", options);
     console.log(db_response);
-    debugger;
+
     const db_json = await db_response.json();
     console.log(db_json);
-    debugger;
+
     console.log(db_json);
   } catch (err) {
-    debugger;
     console.log(userData);
     console.error(err);
   }
